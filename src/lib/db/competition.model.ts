@@ -5,6 +5,7 @@ import BaseModel from './base.model';
 class Competition extends BaseModel {
   declare competition_name: string;
   declare competition_banner: string;
+  declare active: boolean
 }
 
 Competition.init(
@@ -16,6 +17,11 @@ Competition.init(
     competition_banner: {
       type: DataTypes.STRING, 
       allowNull: true,
+    },
+    active: {
+      type: DataTypes.BOOLEAN, 
+      allowNull: false,
+      defaultValue: false
     },
   },
   {

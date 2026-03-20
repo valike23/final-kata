@@ -43,7 +43,7 @@ export class HttpHelper {
 
     static async Get<M>(url: string): Promise<IResponseType<M>> {
         try {
-
+console.log(BASE_URL + url);
             const { data } = await axios.get(BASE_URL + url);
             
             return {

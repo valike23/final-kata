@@ -11,12 +11,15 @@ export const sequelize = new Sequelize({
 });
 
 // Test the connection
-(async () => {
-  try {
-    await sequelize.authenticate();
-    
-    console.log('SQLite database connected successfully!');
-  } catch (error) {
-    console.error('Database connection error:', error);
-  }
-})();
+
+export const connectSQL =()=>{
+  (async () => {
+    try {
+      await sequelize.authenticate();
+      
+      console.log('SQLite database connected successfully!');
+    } catch (error) {
+      console.error('Database connection error:', error);
+    }
+  })();
+}
